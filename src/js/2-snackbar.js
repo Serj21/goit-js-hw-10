@@ -1,4 +1,3 @@
-console.log(5);
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
