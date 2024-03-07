@@ -11,33 +11,6 @@ const minutesElement = document.querySelector('[data-minutes]');
 const secondsElement = document.querySelector('[data-seconds]');
 let datetimePicker;
 
-startButton.addEventListener('click', onBtnClick);
-function onBtnClick() {
-  const userSelectedDate = datetimePicker.selectedDates[0];
-  const currentDate = new Date();
-  const datedifference = userSelectedDate.getTime() - currentDate.getTime();
-  const timerInterval = setInterval(() => {
-    const timeRemaining = convertMs(datedifference); //
-    const daysValue = leadingZero(timeRemaining.days);
-    const hoursValue = leadingZero(timeRemaining.hours);
-    const minutesValue = leadingZero(timeRemaining.minutes);
-    const secondsValue = leadingZero(timeRemaining.seconds);
-
-    daysElement.textContent = daysValue;
-    hoursElement.textContent = hoursValue;
-    minutesElement.textContent = minutesValue;
-    secondsElement.textContent = secondsValue;
-
-    if (datedifference <= 0) {
-      clearInterval(timerInterval);
-      iziToast.success({ title: 'Success', message: 'Countdown finished!' });
-    }
-    datedifference -= 1000;
-  }, 1000);
-  startButton.disabled = true;
-  datetimePicker.destroy();
-}
-
 function initializeTimer() {
   datetimePicker = flatpickr('#datetime-picker', {
     enableTime: true,
@@ -57,6 +30,33 @@ function initializeTimer() {
       }
     },
   });
+}
+
+startButton.addEventListener('click', onBtnClick);
+function onBtnClick() {
+  const userSelectedDate = datetimePicker.selectedDates[0];
+  const currentDate = new Date();
+  const datedifference = userSelectedDate.getTime() - currentDate.getTime();
+  const timerInterval = setInterval(() => {
+    const timeRemaining = convertMs(datedifference);
+    const daysValue = leadingZero(timeRemaining.days);
+    const hoursValue = leadingZero(timeRemaining.hours);
+    const minutesValue = leadingZero(timeRemaining.minutes);
+    const secondsValue = leadingZero(timeRemaining.seconds);
+
+    daysElement.textContent = daysValue;
+    hoursElement.textContent = hoursValue;
+    minutesElement.textContent = minutesValue;
+    secondsElement.textContent = secondsValue;
+
+    if (datedifference <= 0) {
+      clearInterval(timerInterval);
+      iziToast.success({ title: 'Success', message: 'Countdown finished!' });
+    }
+    datedifference -= 1000;
+  }, 1000);
+  startButton.disabled = true;
+  datetimePicker.destroy();
 }
 
 function convertMs(ms) {
