@@ -33,6 +33,12 @@ const options = {
   },
 };
 
+iziToast.settings({
+  position: 'topRight',
+  transitionIn: 'fadeIn',
+  transitionOut: 'fadeOut',
+});
+
 flatpickr(inputEl, options);
 
 startButton.addEventListener('click', onBtnClick);
