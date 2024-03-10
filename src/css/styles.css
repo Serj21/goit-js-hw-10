@@ -7,3 +7,11 @@
 @import url('./reset.css');
 @import url('./timer.css');
 @import url('./snackbar.css');
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 30px;
+}
