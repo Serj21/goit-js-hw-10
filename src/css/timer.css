@@ -3,6 +3,9 @@
   flex-direction: row;
   justify-content: center;
   gap: 24px;
+
+  width: 346px;
+  height: 72px;
 }
 .field {
   display: flex;
@@ -10,33 +13,59 @@
   align-items: center;
 }
 .value {
-  font-family: var(--font-family);
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 40px;
-  line-height: 120%;
+  line-height: 1.2;
   letter-spacing: 0.04em;
   color: #2e2f42;
 }
 .label {
-  font-family: var(--font-family);
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   color: #2e2f42;
 }
 
-.button {
+input {
+  border-radius: 8px;
+
+  margin-right: 8px;
+}
+
+#datetime-picker {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  padding-left: 15px;
+
+  width: 252px;
+  height: 35px;
+}
+button {
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.04em;
-  color: #989898;
+  color: #fff;
 
   border-radius: 8px;
   padding: 8px 16px;
-  width: 75px;
+  width: 86px;
   height: 40px;
+  background: #4e75ff;
+  border: none;
+}
 
-  background: #cfcfcf;
+button:hover {
+  background: #6c8cff;
+}
+
+button:disabled {
+  background-color: #989898;
 }

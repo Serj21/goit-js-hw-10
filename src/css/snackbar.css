@@ -1,0 +1,70 @@
+.form {
+  width: 360px;
+}
+
+legend {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+fieldset {
+  width: 360px;
+  height: 66px;
+
+  border-radius: 4px;
+  stroke-width: 1px;
+  stroke: #808080;
+
+  padding: 0;
+  margin-left: 0;
+  margin-bottom: 20px;
+}
+
+input[type='number'] {
+  width: 340px;
+  height: 40px;
+  padding: 0;
+
+  margin-top: 8px;
+  margin-bottom: 20px;
+
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding-left: 20px;
+}
+
+input[type='radio'] {
+  margin-top: 10px;
+  margin-left: 48px;
+  width: 16px;
+  height: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2f42;
+}
+
+button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 360px;
+  height: 40px;
+  background: #4e75ff;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border: none;
+}
+
+button:hover {
+  background: #6c8cff;
+}
