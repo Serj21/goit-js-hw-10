@@ -5,6 +5,11 @@ const form = document.querySelector('.form');
 const delayInput = form.querySelector('input[name="delay"]');
 const stateRadioButtons = form.querySelectorAll('input[name="state"]');
 
+iziToast.settings({
+  position: 'topRight',
+  transitionIn: 'fadeIn',
+  transitionOut: 'fadeOut',
+});
 form.addEventListener('submit', function (event) {
   event.preventDefault();
 
